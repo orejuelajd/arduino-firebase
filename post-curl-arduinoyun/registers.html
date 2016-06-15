@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width">
 
   <!-- Libraries and modules needed to normal operation of the webapp-->
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
   <script src="http://code.angularjs.org/1.2.6/angular.min.js"></script>
 
   <!-- Imports of the scripts to operation of firebase with angularjs-->
@@ -25,10 +24,10 @@
   function DemoCtrl($scope, $firebase) {
 
     // We obtain the file registers.json stored in firebase database
-    $scope.firebaseRef = new Firebase(urlDataBase + "registros");
+    $scope.firebaseRef = new Firebase(urlDataBase + "registers");
 
     // The registers of registers.json are stored in array $scope.registers.
-    $scope.registros = $firebase($scope.firebaseRef);
+    $scope.registers = $firebase($scope.firebaseRef);
   }
   </script>
 </head>
